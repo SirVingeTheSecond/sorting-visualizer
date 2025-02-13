@@ -12,15 +12,15 @@ import java.util.List;
 import java.util.Map;
 
 public class SortingAlgorithmFactory {
-    private static Map<String, ISortingAlgorithmSupplier> algorithms = new HashMap<>();
+    private static final Map<String, ISortingAlgorithmSupplier> algorithms = new HashMap<>();
 
     // Executed when the class is loaded into memory
     static {
-        algorithms.put("Bubble Sort", (listener, sorter) -> new BubbleSort(listener, sorter));
-        algorithms.put("Insertion Sort", (listener, sorter) -> new InsertionSort(listener, sorter));
-        algorithms.put("Merge Sort", (listener, sorter) -> new MergeSort(listener, sorter));
-        algorithms.put("Qucik Sort", (listener, sorter) -> new QuickSort(listener, sorter));
-        algorithms.put("Radix Sort", (listener, sorter) -> new RadixSort(listener, sorter));
+        algorithms.put("Bubble Sort", BubbleSort::new);
+        algorithms.put("Insertion Sort", InsertionSort::new);
+        algorithms.put("Merge Sort", MergeSort::new);
+        algorithms.put("Qucik Sort", QuickSort::new);
+        algorithms.put("Radix Sort", RadixSort::new);
         // New algorithms goes here
     }
 

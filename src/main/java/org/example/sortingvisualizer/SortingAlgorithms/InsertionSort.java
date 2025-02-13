@@ -1,6 +1,5 @@
 package org.example.sortingvisualizer.SortingAlgorithms;
 
-import javafx.concurrent.Task;
 import org.example.sortingvisualizer.Interface.ISortUpdateListener;
 import org.example.sortingvisualizer.SortingAlgorithmTemplate;
 import org.example.sortingvisualizer.Utility.Sorter;
